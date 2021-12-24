@@ -10,10 +10,10 @@ namespace WebApiDemo.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class HoteelController : ControllerBase
+    public class HotelController : ControllerBase
     {
         private readonly DBContext _context;
-        public HoteelController(DBContext context)
+        public HotelController(DBContext context)
         {
             _context = context;
         }

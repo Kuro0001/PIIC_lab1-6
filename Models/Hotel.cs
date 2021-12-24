@@ -11,14 +11,5 @@ namespace WebApiDemo.Models
         public string Name { get; set; }
         public string Address { get; set; }
         public int DirectionId { get; set; }
-        public Direction Direction { get; set; }
-
-
-
-        public ICollection<Tour> Tours { get; set; }
-        public Hotel()
-        {
-            Tours = new List<Tour>();
-        }
     }
 }

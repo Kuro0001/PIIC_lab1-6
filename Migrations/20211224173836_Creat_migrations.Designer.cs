@@ -10,8 +10,8 @@ using WebApiDemo.Models;
 namespace WebApiDemo.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20211027115435_AllTables")]
-    partial class AllTables
+    [Migration("20211224173836_Creat_migrations")]
+    partial class Creat_migrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -55,10 +55,16 @@ namespace WebApiDemo.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Login")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Passport")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Patronymic")
@@ -67,7 +73,10 @@ namespace WebApiDemo.Migrations
                     b.Property<string>("Phone")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SureName")
+                    b.Property<string>("Sex")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Surname")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -317,7 +326,7 @@ namespace WebApiDemo.Migrations
             modelBuilder.Entity("WebApiDemo.Models.Voucher", b =>
                 {
                     b.HasOne("WebApiDemo.Models.Client", "Client")
-                        .WithMany("Vouchers")
+                        .WithMany()
                         .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -344,11 +353,6 @@ namespace WebApiDemo.Migrations
             modelBuilder.Entity("WebApiDemo.Models.Category", b =>
                 {
                     b.Navigation("Tours");
-                });
-
-            modelBuilder.Entity("WebApiDemo.Models.Client", b =>
-                {
-                    b.Navigation("Vouchers");
                 });
 
             modelBuilder.Entity("WebApiDemo.Models.Direction", b =>

@@ -9,12 +9,5 @@ namespace WebApiDemo.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
-
-
-        public ICollection<Tour> Tours { get; set; }
-        public Kind()
-        {
-            Tours = new List<Tour>();
-        }
     }
 }

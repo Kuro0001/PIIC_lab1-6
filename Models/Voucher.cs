@@ -17,10 +17,7 @@ namespace WebApiDemo.Models
 
         // ==== поля-ключи внешние ====
         public int EmployeeId { get; set; }
-        public Employee Employee { get; set; }
         public int TourId { get; set; }
-        public Tour Tour { get; set; }
         public int ClientId { get; set; }
-        public Client Client { get; set; }
     }
 }

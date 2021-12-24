@@ -7,20 +7,16 @@ namespace WebApiDemo.Models
 {
     public class Client
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
-        public string SureName { get; set; }
+        public string Surname { get; set; }
         public string Patronymic { get; set; }
         public DateTime BirthDate { get; set; }
-        public String Passport { get; set; }
-        public String Phone { get; set; }
-        public String Email { get; set; }
-
-        // ==== поля-ключи внешние ====
-        public ICollection<Voucher> Vouchers { get; set; }
-        public Client()
-        {
-            Vouchers = new List<Voucher>();
-        }
+        public string Passport { get; set; }
+        public string Phone { get; set; }
+        public string Sex { get; set; }
+        public string Email { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
     }
 }

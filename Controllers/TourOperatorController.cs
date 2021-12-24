@@ -18,9 +18,9 @@ namespace WebApiDemo.Controllers
             _context = context;
         }
         [HttpGet]
-        public IEnumerable<TourController> Get()
+        public IEnumerable<TourOperator> Get()
         {
-            return _context.TourControllers.ToList();
+            return _context.TourOperators.ToList();
         }
     }
 }

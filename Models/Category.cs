@@ -11,13 +11,5 @@ namespace WebApiDemo.Models
         public string Name { get; set; }
         public decimal AddedValue { get; set; }
         public decimal Discount { get; set; }
-
-
-
-        public ICollection<Tour> Tours { get; set; }
-        public Category()
-        {
-            Tours = new List<Tour>();
-        }
     }
 }

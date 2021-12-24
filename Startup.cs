@@ -30,6 +30,7 @@ namespace WebApiDemo
             services.AddControllers();
             services.AddDbContext<DBContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
             services.AddControllers().AddXmlDataContractSerializerFormatters();
+            services.AddMvc().AddXmlSerializerFormatters();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

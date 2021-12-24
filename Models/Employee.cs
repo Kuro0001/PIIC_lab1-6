@@ -14,12 +14,5 @@ namespace WebApiDemo.Models
         public string Email { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
-
-
-        public ICollection<Voucher> Vouchers { get; set; }
-        public Employee()
-        {
-            Vouchers = new List<Voucher>();
-        }
     }
 }
